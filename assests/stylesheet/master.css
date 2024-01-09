@@ -1,0 +1,244 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: idk;
+  src: url(../font/Caveat-Regular.ttf);
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: idk;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gn {
+  width: 75%;
+  height: 500px;
+  box-shadow: 5px 5px 20px rgb(61, 61, 61);
+  border-radius: 10px;
+  background-color: rgb(255, 242, 248);
+  position: relative;
+  overflow: hidden;
+}
+.gn > .view {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.gn > .view::after {
+  content: "";
+  width: 400px;
+  height: 1px;
+  position: absolute;
+  background-color: #bcbcbd;
+  top: 50%;
+  left: 72%;
+  transform: rotate(90deg);
+}
+.gn > .view > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+.gn > .view > .d1 {
+  align-items: end;
+}
+.gn > .view > .d1 > figure {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.gn > .view > .d1 > figure > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gn > .view > .d2 {
+  align-content: center;
+}
+.gn > .view > .d2 > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.gn > .view > .d2 > .line > .time {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.gn > .view > .d2 > .line > .time > * {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gn > .view > .d2 > .line > .time > .zaman {
+  justify-content: space-between;
+}
+.gn > .view > .d2 > .line > .time > .zaman > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 30px;
+  font-size: 20px;
+}
+.gn > .view > .d2 > .line > .time > .poshsh > .coverr {
+  width: 70%;
+  height: 7px;
+  background-color: rgb(185, 187, 186);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.gn > .view > .d2 > .line > .time > .poshsh > .coverr > .TL {
+  border: 2px solid rgb(27, 161, 214);
+  width: 15px;
+  height: 15px;
+  background-color: rgb(22, 22, 22);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  transition: 0.2s;
+}
+.gn > .view > .d2 > .line > .time > .poshsh > .coverr > .TL:hover {
+  border: 2px solid rgb(204, 13, 230);
+  width: 17px;
+  height: 17px;
+}
+.gn > .view > .d2 > .control > span {
+  font-size: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.gn > .view > .d2 > .tname > p {
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 600;
+}
+.gn > .view > .d2 > .sname > p {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 600;
+}
+.gn > .list {
+  width: calc(100% + 20px);
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+.gn > .list > .long {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  align-content: start;
+  position: relative;
+}
+.gn > .list > .long > .coverRow {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.gn > .list > .long > .coverRow::after {
+  content: "";
+  width: 80%;
+  height: 1px;
+  background-color: #bcbcbd;
+  position: absolute;
+  bottom: 0;
+  left: 12.5;
+}
+.gn > .list > .long > .coverRow > .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  height: 200px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.gn > .list > .long > .coverRow > .row:hover {
+  background-color: rgba(188, 188, 189, 0.3411764706);
+}
+.gn > .list > .long > .coverRow > .row > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.gn > .list > .long > .coverRow > .row > .singerimg {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 115px;
+  height: 115px;
+  margin: 0 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.gn > .list > .long > .coverRow > .row > .singerimg > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gn > .list > .long > .coverRow > .row > .info {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  justify-content: start;
+  align-content: start;
+}
+.gn > .list > .long > .coverRow > .row > .info > * {
+  width: 100%;
+  margin: 5px 0;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.gn > .list > .long > .coverRow > .row > .info > .track {
+  font-size: 25px;
+}
+.gn > .list > .long > .coverRow > .row > .info > .singer {
+  font-size: 15px;
+  color: #9FA3A4;
+}
+.gn > .list > .long > #scrolll {
+  position: absolute;
+  top: 10px;
+  right: calc(1% + 2px);
+  width: 4px;
+  height: 90px;
+  border-radius: 30%;
+  background-color: rgb(27, 161, 214);
+}/*# sourceMappingURL=master.css.map */
